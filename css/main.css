@@ -976,25 +976,11 @@ textarea:focus {
   display: block;
   text-decoration: none;
 }
-.main-page .images__link:hover, .main-page .images__link:focus {
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-.main-page .images__link:hover ::before, .main-page .images__link:focus ::before {
-  opacity: 1;
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-}
-.main-page .images__link:hover .text, .main-page .images__link:focus .text {
-  opacity: 1;
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-}
-.main-page .images .pre-photo {
+.main-page .images__link .images__bg {
   position: relative;
   overflow: hidden;
 }
-.main-page .images .pre-photo::before {
+.main-page .images__link .images__bg::before {
   display: inline-block;
   position: absolute;
   content: "";
@@ -1009,7 +995,21 @@ textarea:focus {
   transition: opacity var(--basic-animation), transform var(--basic-animation);
   transition: opacity var(--basic-animation), transform var(--basic-animation), -webkit-transform var(--basic-animation);
 }
-.main-page .images .text {
+.main-page .images__link:hover, .main-page .images__link:focus {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.main-page .images__link:hover ::before, .main-page .images__link:focus ::before {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+.main-page .images__link:hover .images__bg-text, .main-page .images__link:focus .images__bg-text {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+.main-page .images .images__bg-text {
   display: inline-block;
   position: absolute;
   padding: 63px 24px;
