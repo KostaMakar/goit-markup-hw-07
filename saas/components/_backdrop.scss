@@ -47,9 +47,7 @@
     top: 8px;
     right: 8px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex;
     width: 30px;
     height: 30px;
     padding: 10px;
