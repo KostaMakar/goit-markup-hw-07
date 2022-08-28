@@ -36,7 +36,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-.address-list, .clients-list, .net-list, .team-list, .work-list, .rules-list {
+.images, .btn-list, .address-list, .clients-list, .net-list, .team-list, .work-list, .rules-list, .contacts-list, .nav-list {
   margin: 0px;
   padding: 0px;
   list-style: none;
