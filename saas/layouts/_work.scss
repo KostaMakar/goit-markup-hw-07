@@ -18,9 +18,7 @@
     position: absolute;
     bottom: 0;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex;
     width: 370px;
     height: 70px;
 

@@ -11,7 +11,12 @@ body {
     padding: 0px;
     list-style: none;
 }
-.section {
+%section {
     padding-top: 94px;
     padding-bottom: 94px;
+}
+%flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

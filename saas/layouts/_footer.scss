@@ -37,9 +37,7 @@
 }
 
 .form {
-    display: flex;
-    justify-content: right;
-    align-items: center;
+    @extend %flex;
 }
 
 .sign-up input {
