@@ -87,11 +87,6 @@
 .soc {
     background: rgba(255, 255, 255, 0.1);
 }
-
-.icon {
-    fill: var(--main-bg-color)
-}
-
 .footer-logo {
     display: inline-block;
     margin-bottom: 20px;
@@ -107,6 +102,7 @@
 
 .address-list {
     padding: 0;
+    @extend %list;
 }
 
 .foot {
