@@ -47,7 +47,7 @@ body {
   padding-bottom: 94px;
 }
 
-.form, .net-list__link, .work-item, .rules .box, .btn-close, .contacts-list__link {
+.form, .net-list__link, .work-item, .rules .box, .form-checkbox__label, .btn-close, .contacts-list__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -311,16 +311,10 @@ body {
           flex-direction: column;
   margin-bottom: 10px;
 }
-
-.comment {
-  margin-bottom: 20px;
-}
-
 .form-field:last-child {
   margin-bottom: 20px;
 }
-
-.form-label {
+.form-field__label {
   margin-bottom: 4px;
   text-align: left;
   font-weight: 400;
@@ -332,21 +326,15 @@ body {
   background-color: var(--main-bg-color);
 }
 
-.form-picture {
+.form-field--gap {
+  margin-bottom: 20px;
+}
+
+.form-item {
   position: relative;
+  /* adding color changing to the neighbour when input has a focus */
 }
-
-.form-icon {
-  position: absolute;
-  top: 50%;
-  left: 15px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: fill var(--basic-animation);
-  transition: fill var(--basic-animation);
-}
-
-.form-input {
+.form-item__input {
   width: 100%;
   height: 40px;
   padding-left: 42px;
@@ -356,14 +344,20 @@ body {
   border-radius: 4px;
   cursor: pointer;
 }
-
-.form-input:focus {
+.form-item__input:focus {
   border-color: var(--special-text-color);
   outline: none;
 }
-
-/* adding color changing to the neighbour when input has a focus */
-.form-input:focus + .form-icon {
+.form-item__icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: fill var(--basic-animation);
+  transition: fill var(--basic-animation);
+}
+.form-item__input:focus + .form-item__icon {
   fill: var(--special-text-color);
 }
 
@@ -423,40 +417,27 @@ textarea:focus {
   outline: none;
 }
 
-.form-agreement {
+.form-checkbox {
   margin-bottom: 30px;
+  /* cusomazing checkbox */
 }
-
-.form-agreement input {
+.form-checkbox input {
   cursor: pointer;
 }
-
-.agreement-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.form-checkbox__label {
   cursor: pointer;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   color: var(--secondary-text-color);
 }
-
-.agreement-link {
+.form-checkbox__link {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   color: var(--special-text-color);
 }
-
-/* cusomazing checkbox */
-.checkbox {
+.form-checkbox__input {
   /* -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; */
@@ -469,8 +450,7 @@ textarea:focus {
   padding: 0;
   border: 0;
 }
-
-.agreement-label::before {
+.form-checkbox__label::before {
   content: "";
   display: inline-block;
   width: 16px;
@@ -479,8 +459,7 @@ textarea:focus {
   border-radius: 3px;
   margin-right: 7px;
 }
-
-.checkbox:checked + .agreement-label::before {
+.form-checkbox__input:checked + .form-checkbox__label::before {
   border-color: transparent;
   background-color: var(--special-text-color);
   background-image: url(../images/check.svg);
