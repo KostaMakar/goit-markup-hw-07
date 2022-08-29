@@ -16,15 +16,14 @@
     padding: 0;
     @extend %list;
     &__link {
-            transition: border-color var(--basic-animation);
+        transition: border-color var(--basic-animation);
     
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 170px;
-            height: 92px;
-            border: 1px solid #AFB1B8;
-            border-radius: 4px;
+        @extend %flex;
+        width: 170px;
+        height: 92px;
+        @include bordered(1px,#AFB1B8);
+        
+        border-radius: 4px;
         }
     
         &__icon {

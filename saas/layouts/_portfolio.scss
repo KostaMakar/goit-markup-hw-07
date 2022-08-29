@@ -1,8 +1,7 @@
 .main-page {
     @extend %section;
     .btn-list {
-            display: flex;
-            justify-content: center;
+            @extend %flex;
             margin-bottom: 50px;
             @extend %list;
     
@@ -68,8 +67,8 @@
                     display: block;
                     text-decoration: none;
                     .images__bg {
-                            position: relative;
-                            overflow: hidden;
+                        position: relative;
+                        overflow: hidden;
                         }
 
                     .images__bg::before {

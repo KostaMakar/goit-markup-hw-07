@@ -28,9 +28,6 @@
 
     color: var(--primary-text-color)
 }
-
-
-
 .title {
     display: inline-block;
     margin-bottom: 30px;
@@ -48,8 +45,7 @@
     display: block;
     min-width: 216px;
     height: 50px;
-    border: 1px solid;
-    border-color: var(--special-text-color);
+    @include bordered(1px, var(--special-text-color));
     border-radius: 4px;
     padding: 10px 32px;
     margin-right: auto;
